@@ -7,6 +7,11 @@ GHC 7.8 provides primops that let us access these CPU instructions.
 This package wraps thos primops in a more user friendly form.
 These primops can only be used with the llvm backend, so you must have llvm installed and compile any program using this library with the -llvm option.
 
+This library [is available on hackage](http://hackage.haskell.org/package/simd), and so can be installed by:
+    
+    cabal update
+    cabal install simd
+
 Example usage
 ------------
 
