@@ -78,5 +78,4 @@ It might be useful to provide some rewrite rules to make vectorization an automa
 This is not easy to do with the current Data.Vector API, however, because all the vector operations get inlined before the rules can fire.
 In any case, people who care enough about performance to want SIMD instructions will probably want to write the SIMD code manually.
 
-Finally, I wasn't part of the work on the GHC side of SIMD operations.  
-That's where all the difficult stuff happened.
+Finally, I wasn't part of the work on the GHC side of SIMD operations.  They did all the hard work.  Thanks!
