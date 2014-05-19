@@ -1,4 +1,4 @@
-set terminal png size 600,400
+set terminal pngcairo size 600,400
 set termoption enhanced
 
 unset key
