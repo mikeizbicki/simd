@@ -59,7 +59,7 @@ Performance tests will vary a lot depending on what computer you are using and w
 I ran these tests on my 64 bit Core 2 Duo laptop.
 
 <p align=center>
-<img src="http://izbicki.me/public/cs/github/summary16000.png" alt="graph" />
+<img src="http://izbicki.me/public/cs/github/summary16000-2.png" alt="graph" />
 </p>
 <p align=center>
 <img src="http://izbicki.me/public/cs/github/summary1600.png" alt="graph" />
