@@ -386,9 +386,9 @@ vectorizeUnboxedX8 v = if len `mod` 8 == 0 && off `mod` 8 == 0
 -- | converts an unboxed SIMD vector into a standard unboxed vector
 {-# INLINE unVectorizeUnboxedX8 #-}
 unVectorizeUnboxedX8 :: (SIMD8 a, VU.Unbox a) => VU.Vector (X8 a) -> VU.Vector a
-unVectorizeUnboxedX8 v = unsafeCoerce v
+unVectorizeUnboxedX8 v = unsafeCoerce pv
     where
-        pv = UnsafePrimVector (len*8) (off*8)
+        pv = UnsafePrimVector (len*8) (off*8) arr
         UnsafePrimVector len off arr = unsafeCoerce v
 
 -- | converts a storable vector into one that will use the SIMD instructions

@@ -328,9 +328,9 @@ vectorizeUnboxedX2 v = if len `mod` 2 == 0 && off `mod` 2 == 0
 -- | converts an unboxed SIMD vector into a standard unboxed vector
 {-# INLINE unVectorizeUnboxedX2 #-}
 unVectorizeUnboxedX2 :: (SIMD2 a, VU.Unbox a) => VU.Vector (X2 a) -> VU.Vector a
-unVectorizeUnboxedX2 v = unsafeCoerce v
+unVectorizeUnboxedX2 v = unsafeCoerce pv
     where
-        pv = UnsafePrimVector (len*2) (off*2)
+        pv = UnsafePrimVector (len*2) (off*2) arr
         UnsafePrimVector len off arr = unsafeCoerce v
 
 -- | converts a storable vector into one that will use the SIMD instructions
